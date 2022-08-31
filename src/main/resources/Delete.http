@@ -1,0 +1,4 @@
+DELETE http://localhost:9073/people/7
+Accept: application/json
+
+###
