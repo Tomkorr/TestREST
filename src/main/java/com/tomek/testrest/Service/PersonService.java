@@ -4,9 +4,8 @@ import com.tomek.testrest.Model.Person;
 import com.tomek.testrest.Repoistory.PersonRepoistory;
 import org.springframework.stereotype.Service;
 
-import javax.validation.Valid;
-
 @Service
+
 
 public class PersonService {
 
@@ -15,7 +14,7 @@ public class PersonService {
     public PersonService(PersonRepoistory personRepoistory) {
         this.personRepoistory = personRepoistory;
     }
-    public Person updatePersonFirstNameById(Long id, Person person){
+    public Person updatePersonById(Long id, Person person){
 
         Person personToUpdate = personRepoistory.findById(id).orElseThrow();
         personToUpdate.setFirstName(person.getFirstName());
